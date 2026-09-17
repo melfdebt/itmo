@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://csvnxwbpljvax"]
+
+[ext_resource type="Script" uid="uid://crylccmoisxfm" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="Gradient" id="Gradient_sh265"]
+offsets = PackedFloat32Array(0, 0.54086536)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ntbkr"]
+gradient = SubResource("Gradient_sh265")
+metadata/_snap_enabled = true
+
+[node name="Player" type="Sprite2D" unique_id=925599145]
+texture = SubResource("GradientTexture2D_ntbkr")
+script = ExtResource("1_4flbx")
+
+[node name="Timer" type="Timer" parent="." unique_id=1966686779]
+one_shot = true

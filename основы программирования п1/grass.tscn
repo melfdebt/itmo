@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://s7eicxbjrov6"]
+
+[ext_resource type="Script" uid="uid://cd62y8kqbh3s2" path="res://grass.gd" id="1_mw2ei"]
+
+[sub_resource type="Gradient" id="Gradient_mw2ei"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ntbkr"]
+gradient = SubResource("Gradient_mw2ei")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbkr"]
+size = Vector2(1260.5, 181)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rub7e"]
+size = Vector2(96, 869)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i75m2"]
+size = Vector2(133.5, 993)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trhxe"]
+size = Vector2(1364, 20)
+
+[node name="Grass" type="Node2D" unique_id=488303727]
+script = ExtResource("1_mw2ei")
+
+[node name="GrassSprite" type="Sprite2D" parent="." unique_id=1990188555]
+position = Vector2(603.00006, 337.5)
+scale = Vector2(19.843752, 11.546875)
+texture = SubResource("GradientTexture2D_ntbkr")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=766132220]
+position = Vector2(589, 356)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2211288]
+position = Vector2(28, -450)
+shape = SubResource("RectangleShape2D_ntbkr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=693249499]
+position = Vector2(-640, -75)
+shape = SubResource("RectangleShape2D_rub7e")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=1237844632]
+position = Vector2(640, -34)
+shape = SubResource("RectangleShape2D_i75m2")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=807788628]
+position = Vector2(33, 307)
+shape = SubResource("RectangleShape2D_trhxe")
